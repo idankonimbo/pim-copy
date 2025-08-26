@@ -1,0 +1,45 @@
+name: '💡 Feature Request'
+description: Request a new feature for the {{plugin-name}}.
+title: '[Feature]: '
+labels: ['feature']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to create this feature request!
+  - type: textarea
+    id: what
+    attributes:
+      label: 'What this feature does?'
+      description: Please describe the feature functionality.
+      placeholder: Im a feature, but what is my purpose?!
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: 'How do you plan of executing this feature?'
+      description: Please describe how this feature is going to get built, please elaborate in detail on the changes and add links to important libraries or documentation.
+      placeholder: Knowledge is pawaaaa!
+    validations:
+      required: true
+  - type: input
+    id: figma
+    attributes:
+      label: 'Figma Link'
+      description: Can you link the design in figma?
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: 'Require backend changes'
+      options:
+        - label: 'This feature constitute a change in our backend code.'
+  - type: checkboxes
+    attributes:
+      label: 'Require frontend changes'
+      options:
+        - label: 'This feature constitute a change in our frontend code.'
+  - type: markdown
+    attributes:
+      value: 'Thanks for completing our form and submitting this feature request!'

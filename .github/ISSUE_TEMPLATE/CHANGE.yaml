@@ -1,0 +1,37 @@
+name: '🔄 Change Request'
+description: Request a new change for the {{plugin-name}}.
+title: '[Change]: '
+labels: ['change']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to create this change request!
+  - type: textarea
+    id: what
+    attributes:
+      label: 'What are we changing?'
+      description: Please describe the requested change, please detail the specific feature it modifies.
+      placeholder: I want to change, I really do, but I don't know how!
+    validations:
+      required: true
+  - type: input
+    id: figma
+    attributes:
+      label: 'Figma URL'
+      description: Can you link the design in figma?
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: 'Require backend changes'
+      options:
+        - label: 'This feature constitute a change in our backend code.'
+  - type: checkboxes
+    attributes:
+      label: 'Require frontend changes'
+      options:
+        - label: 'This feature constitute a change in our frontend code.'
+  - type: markdown
+    attributes:
+      value: 'Thanks for completing our form and submitting this change request!'
